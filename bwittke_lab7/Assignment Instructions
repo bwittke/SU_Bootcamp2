@@ -1,0 +1,27 @@
+Use a queue to create an L-system rewrite grammar.
+
+Here's a video of what this program should look like: https://www.screencast.com/t/6xgISV0sm (Links to an external site.)
+
+I've provided the whole program to you...except the RenderQueue class. You need to figure out the requirements based on the how it is 
+used in the rest of the program. You have to write it from scratch as a doubly-linked list--not use any Java API components or google-searched solutions. 
+I'll give you a few guidelines, though. It is a standard queue with elements that are RenderCommands. So you can imagine it has an enqueue method that 
+takes a RenderCommand and a dequeue method that returns a RenderCommand. It also has some methods that help translate from the string representation of L-system 
+grammars. So it has a toString method and a fromString method. Make sure the copy method makes a deep copy of the queue and also make sure the append does not 
+affect the queue that is supplied as it's argument (it needs to copy the elements from that queue onto the end of itself).
+
+The doubly-linked list implementation should have a head reference for the front end of the queue. You will take elements off from the head with the 
+dequeue method. It should also have a tail reference. You will add elements on at the tail with the enqueue method.
+
+Here are the files you will use for the lab. Unzip the package and start there. You are only allowed to change the package name in the provided files.
+Then add your own RenderQueue.java. To hand in your assignment, only hand in RenderQueue.java.
+
+lundeenk_lab7_setup.zip Download lundeenk_lab7_setup.zip
+
+L-Systems
+In computer graphics rendering, as for CGI in movies and games, creating natural-looking plants is often done with software based on L-systems. 
+In this assignment we're going to build an L-system rewrite and rendering system that can animate the drawing of any of the simple L-system graphics.
+
+The name L-system is short for Lindenmayer-system after the original researcher in cellular growth patterns, Aristrid Lindenmayer, an Hungarian biologist.
+The L-system is based on two topics that were popular both in computer science and mathematics in the 20th century--formal language rewrite grammars and fractals.
+Highly recommended and not requiring any special domain knowledge is the Hofstadter 1979 bestseller, Gödel, Escher, Bach: An Eternal Golden Braid, which delves 
+into all these subjects. For an introductory discussion of programming L-systems, see this. and the wikipedia article.
